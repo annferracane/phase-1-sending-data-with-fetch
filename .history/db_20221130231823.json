@@ -34,15 +34,7 @@
     }
   ],
   "users": [
-    {
-      "name": "ann",
-      "id": 1
-    },
-    {
-      "name": "ann",
-      "email": "ann@patchventures.com",
-      "id": 2
-    }
+
   ],
   "robots": [
     {

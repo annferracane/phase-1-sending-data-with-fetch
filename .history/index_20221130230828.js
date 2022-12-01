@@ -7,24 +7,24 @@ function submitData(userName, userEmail) {
     const configObj = {
         method: 'POST',
         headers: {
-            'content-type': 'application/json',
-            'accept': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
 
         body: JSON.stringify(userData)
 
     };
 
-    return fetch('http://localhost:3000/users', configObj)
+    fetch('http://localhost:3000/users', configObj)
     .then(resp => resp.json())
-    .then(data => appendToDOM(data.id))
-    .catch(error => appendToDOM(error.message))
+    .then(data => appendUser(data))
+    .catch(error => console.log(error))
 
 }
 
-function appendToDOM(resp) {
+function appendUser(data) {
     const p = document.createElement('p');
-    p.textContent = resp;
+    p.textContent = data.id;
     document.querySelector('body').appendChild(p);
 }
 

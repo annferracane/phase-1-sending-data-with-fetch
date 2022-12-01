@@ -7,8 +7,8 @@ function submitData(userName, userEmail) {
     const configObj = {
         method: 'POST',
         headers: {
-            'content-type': 'application/json',
-            'accept': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
 
         body: JSON.stringify(userData)
@@ -24,7 +24,7 @@ function submitData(userName, userEmail) {
 
 function appendToDOM(resp) {
     const p = document.createElement('p');
-    p.textContent = resp;
+    p.textContent = data;
     document.querySelector('body').appendChild(p);
 }
 

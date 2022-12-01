@@ -1,34 +1,9 @@
 function submitData(userName, userEmail) {
-    const userData = {
-        name: userName,
-        email: userEmail,
-    };
-
-    const configObj = {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json',
-            'accept': 'application/json'
-        },
-
-        body: JSON.stringify(userData)
-
-    };
-
-    return fetch('http://localhost:3000/users', configObj)
-    .then(resp => resp.json())
-    .then(data => appendToDOM(data.id))
-    .catch(error => appendToDOM(error.message))
+    fetch('http://localhost:3000/users', configObj)
+    .then()
 
 }
 
-function appendToDOM(resp) {
-    const p = document.createElement('p');
-    p.textContent = resp;
-    document.querySelector('body').appendChild(p);
-}
-
-/*
 const formData = {
     dogName: "Byron",
     dogBreed: "Poodle",
@@ -70,4 +45,3 @@ const formData = {
         .then(response => response.json())
         .then(object => console.log(object))
         .catch(error => console.log(error.message));
-*/

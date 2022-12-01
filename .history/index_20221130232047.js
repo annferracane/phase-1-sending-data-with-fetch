@@ -8,7 +8,7 @@ function submitData(userName, userEmail) {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            'accept': 'application/json'
+            'Accept': 'application/json'
         },
 
         body: JSON.stringify(userData)

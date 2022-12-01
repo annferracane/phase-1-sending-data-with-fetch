@@ -7,8 +7,8 @@ function submitData(userName, userEmail) {
     const configObj = {
         method: 'POST',
         headers: {
-            'content-type': 'application/json',
-            'accept': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
 
         body: JSON.stringify(userData)
